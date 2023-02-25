@@ -75,7 +75,12 @@ x-airflow-common:
 
 services:
   etl:
-    image: prueba
+    image: python:3.9.7-slim-bullseye
+    build: .
+    ports: 
+      - 8000:8000
+    volumes:
+      - /scripts:/var/lib/data
 
   postgres:
     image: postgres:13

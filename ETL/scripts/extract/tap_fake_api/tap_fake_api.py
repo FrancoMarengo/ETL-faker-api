@@ -13,7 +13,7 @@ fake_api_config = "_quantity=1000"
 # URL final para hacer el request
 url = base_url+endpoint+fake_api_config
 
-# 
+# Modelo del esquema JSON en el que se obtendrán los datos 
 schema = {'properties': {
       'id': {'type': 'String'},
       'firstname': {'type': 'string'},
@@ -39,7 +39,7 @@ schema = {'properties': {
     }
 }
 
-# .
+# Define el esquema anterior e indica que la clave primaria de cada dato es el 'id'
 singer.write_schema(stream_name='persons', schema=schema, key_properties=['id'])
 
 def main():
