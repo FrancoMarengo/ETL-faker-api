@@ -1,0 +1,4 @@
+requests==2.28.2
+singer-python==5.13.0
+target-csv==latest
+pyspark==3.3.2
